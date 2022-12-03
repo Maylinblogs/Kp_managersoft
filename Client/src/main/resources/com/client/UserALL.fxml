@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.UserAllFunction">
+   <children>
+      <TableView fx:id="tableVacancie" layoutX="14.0" layoutY="21.0" prefHeight="182.0" prefWidth="431.0">
+         <columns>
+            <TableColumn fx:id="vacancie_idColum" prefWidth="75.0" styleClass="tableColumn" text="vacancie_id" />
+            <TableColumn fx:id="departament_idColum" prefWidth="99.99996948242188" styleClass="tableColumn" text="departament_id" />
+            <TableColumn fx:id="name_vacancieColum" prefWidth="99.33331298828125" styleClass="tableColumn" text="name_vacancie" />
+            <TableColumn fx:id="infoColum" minWidth="7.3333740234375" prefWidth="62.66668701171875" styleClass="tableColumn" text="info" />
+            <TableColumn fx:id="priceColum" prefWidth="92.00002034505206" styleClass="tableColumn" text="price" />
+         </columns>
+      </TableView>
+      <TableView fx:id="tableDepartment1" layoutX="14.0" layoutY="209.0" prefHeight="182.0" prefWidth="317.0">
+         <columns>
+            <TableColumn fx:id="department_idColumS" prefWidth="75.0" styleClass="tableColumn" text="departament_id" />
+            <TableColumn fx:id="departament_nameColum1" prefWidth="130.66665649414062" styleClass="tableColumn" text="departament_name" />
+            <TableColumn fx:id="adsressColum1" prefWidth="108.67924499511719" styleClass="tableColumn" text="address" />
+         </columns>
+      </TableView>
+      <VBox layoutX="447.0" layoutY="21.0" prefHeight="213.0" prefWidth="149.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onALLVacancie" prefHeight="25.0" prefWidth="149.0" text="Все вакансии">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onALLDEpartment" prefWidth="149.0" text="Все отделы">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onAddDepartment" prefWidth="149.0" text="Добавить отдел ">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onDeleteVacancie" prefWidth="149.0" text="Удалить вакансию">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onAddVacancie" prefWidth="149.0" text="Добавить вакансию ">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onBack" prefWidth="149.0" text="Назад">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="name" layoutX="370.0" layoutY="294.0" prefHeight="28.0" prefWidth="77.0" promptText="Введите имя" styleClass="input" />
+      <TextField fx:id="info" layoutX="370.0" layoutY="345.0" prefHeight="28.0" prefWidth="77.0" promptText="Введите информацию" styleClass="input" />
+      <Label layoutX="370.0" layoutY="275.0" text="Имя">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="323.0" text="Информация">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="price" layoutX="370.0" layoutY="243.0" prefHeight="28.0" prefWidth="77.0" promptText="зарплата" styleClass="input" />
+      <TextField fx:id="c1" layoutX="489.0" layoutY="257.0" prefHeight="28.0" prefWidth="55.0" promptText="С1" styleClass="input" />
+      <Label layoutX="491.0" layoutY="234.0" text="С1">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="c2" layoutX="491.0" layoutY="309.0" prefHeight="28.0" prefWidth="55.0" promptText="C2" styleClass="input" />
+      <TextField fx:id="c3" layoutX="491.0" layoutY="357.0" prefHeight="28.0" prefWidth="55.0" promptText="C2" styleClass="input" />
+      <Label layoutX="491.0" layoutY="292.0" text="С2">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="491.0" layoutY="337.0" text="С3">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="553.0" layoutY="258.0" mnemonicParsing="false" onAction="#on1Formul" prefHeight="25.0" prefWidth="26.0" text="1" />
+      <Button layoutX="553.0" layoutY="310.0" mnemonicParsing="false" onAction="#on2Formula" prefHeight="25.0" prefWidth="26.0" text="2" />
+      <Label layoutX="370.0" layoutY="226.0" text="запрлата">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="main" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.StatWorker">
+   <children>
+      <Label layoutX="186.0" layoutY="20.0" prefHeight="40.0" prefWidth="297.0" text="Статистика">
+         <font>
+            <Font name="Times New Roman" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="30.0" layoutY="338.0" mnemonicParsing="false" onAction="#onBack" prefHeight="30.0" prefWidth="175.0" text="Выход">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="221.0" layoutY="338.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="30.0" prefWidth="175.0" text="Обновить">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PieChart fx:id="pieClaim" layoutX="57.0" layoutY="67.0" prefHeight="229.0" prefWidth="445.0" />
+   </children>
+</AnchorPane>

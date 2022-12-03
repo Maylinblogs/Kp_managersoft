@@ -1,0 +1,31 @@
+.main {
+	-fx-background: linear-gradient(to right, lightgreen, green);
+}
+
+.input {
+	-fx-border-width: 1px;
+	-fx-border-style: solid;
+	-fx-border-color: gray;
+	-fx-border-radius: 5px;
+	-fx-background-radius: 5px;
+	-fx-background: gray;
+}
+
+.button {
+	-fx-border-radius: 35px;
+	-fx-background-radius: 35px;
+	-fx-background-color: #525252;
+	-fx-text-fill: #b3b3b3;
+}
+
+.tableColumn {
+	-fx-background-color: #525252;
+}
+
+.button:hover {
+	-fx-background-color: #686767;
+}
+
+.button:pressed {
+	-fx-background-color: #7d7c7c;
+}
