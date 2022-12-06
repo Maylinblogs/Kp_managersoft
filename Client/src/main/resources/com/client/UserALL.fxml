@@ -130,12 +130,14 @@
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="553.0" layoutY="258.0" mnemonicParsing="false" onAction="#on1Formul" prefHeight="25.0" prefWidth="26.0" text="1" />
-      <Button layoutX="553.0" layoutY="310.0" mnemonicParsing="false" onAction="#on2Formula" prefHeight="25.0" prefWidth="26.0" text="2" />
+      <Button layoutX="553.0" layoutY="237.0" mnemonicParsing="false" onAction="#on1Formul" prefHeight="25.0" prefWidth="26.0" text="1" />
+      <Button layoutX="553.0" layoutY="279.0" mnemonicParsing="false" onAction="#on2Formula" prefHeight="25.0" prefWidth="26.0" text="2" />
       <Label layoutX="370.0" layoutY="226.0" text="запрлата">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
+      <Button layoutX="553.0" layoutY="318.0" mnemonicParsing="false" onAction="#on3Formula" prefHeight="25.0" prefWidth="26.0" text="3" />
+      <Button layoutX="553.0" layoutY="360.0" mnemonicParsing="false" onAction="#on4Formula" prefHeight="25.0" prefWidth="26.0" text="4" />
    </children>
 </AnchorPane>

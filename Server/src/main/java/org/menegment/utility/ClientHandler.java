@@ -460,17 +460,24 @@ public class ClientHandler implements Runnable {
                             objectOutputStream.flush();
                             objectOutputStream.writeObject(vacanciesService.f1(res.get(1), res.get(2), res.get(3)));
                             objectOutputStream.flush();
+                        } else if (res.get(0) == 2.0) {
+                            objectOutputStream.writeObject(Action.OK);
+                            objectOutputStream.flush();
+                            objectOutputStream.writeObject(vacanciesService.f2(res.get(1), res.get(2), res.get(3)));
+                            objectOutputStream.flush();
+                        } else if (res.get(0) == 3.0) {
+                            objectOutputStream.writeObject(Action.OK);
+                            objectOutputStream.flush();
+                            objectOutputStream.writeObject(vacanciesService.f3(res.get(1), res.get(2), res.get(3)));
+                            objectOutputStream.flush();
+                        } else if (res.get(0) == 4.0) {
+                            objectOutputStream.writeObject(Action.OK);
+                            objectOutputStream.flush();
+                            objectOutputStream.writeObject(vacanciesService.f4(res.get(1), res.get(2), res.get(3)));
+                            objectOutputStream.flush();
                         } else {
-                            if (res.get(0) == 2.0) {
-                                objectOutputStream.writeObject(Action.OK);
-                                objectOutputStream.flush();
-                                objectOutputStream.writeObject(vacanciesService.f2(res.get(1), res.get(2), res.get(3)));
-                                objectOutputStream.flush();
-
-                            } else {
-                                objectOutputStream.writeObject(Action.NO);
-                                objectOutputStream.flush();
-                            }
+                            objectOutputStream.writeObject(Action.NO);
+                            objectOutputStream.flush();
                         }
                         break;
                     }

@@ -21,7 +21,7 @@ public class JDBC {
             e.printStackTrace();
             throw new SQLException();
         }
-        connection = (ConnectionImpl) DriverManager.getConnection("jdbc:mysql://localhost/m1?useUnicode=true,serverTimezone=UTC","root","Mama.345");
+        connection = (ConnectionImpl) DriverManager.getConnection("jdbc:mysql://localhost/m1?useUnicode=true,serverTimezone=UTC","root","Mama345");
         if (connection == null) {
             throw new SQLException();
         }

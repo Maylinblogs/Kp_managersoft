@@ -83,4 +83,13 @@ public class VacanciesService {
     public Double f2(Double c1, Double c2, Double c3) {
         return c1 * c2 * c3;
     }
+
+    public Double f3(Double c1, Double c2, Double c3) {
+        return c1 * c2 + c3;
+    }
+
+    public Double f4(Double c1, Double c2, Double c3) {
+        c3 = 1.0;
+        return c1 * c2 * c3;
+    }
 }

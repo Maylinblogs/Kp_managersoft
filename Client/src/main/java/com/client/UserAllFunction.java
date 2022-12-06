@@ -321,4 +321,61 @@ public class UserAllFunction {
             }
         }
     }
+
+
+    @FXML
+    void on3Formula(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<Double> doubles = new ArrayList<>();
+        if (c1.getText().isBlank() || c2.getText().isBlank() || c3.getText().isBlank()) {
+
+        } else {
+            doubles.add(3.0);
+            doubles.add(Double.valueOf(c1.getText()));
+            doubles.add(Double.valueOf(c2.getText()));
+            doubles.add(Double.valueOf(c3.getText()));
+            ClientSocket.getInstance().getObjectOutputStream().writeObject(Action.FORMULA_1);
+            ClientSocket.getInstance().getObjectOutputStream().flush();
+            ClientSocket.getInstance().getObjectOutputStream().writeObject(doubles);
+            ClientSocket.getInstance().getObjectOutputStream().flush();
+            Action a = (Action) ClientSocket.getInstance().getObjectInputStream().readObject();
+            switch (a) {
+                case OK: {
+                    Double res = (Double) ClientSocket.getInstance().getObjectInputStream().readObject();
+                    price.setText(String.valueOf(res));
+                    break;
+                }
+                case NO: {
+                    break;
+                }
+            }
+        }
+    }
+
+    @FXML
+    void on4Formula(ActionEvent event) throws IOException, ClassNotFoundException {
+        ArrayList<Double> doubles = new ArrayList<>();
+        if (c1.getText().isBlank() || c2.getText().isBlank() || c3.getText().isBlank()) {
+
+        } else {
+            doubles.add(4.0);
+            doubles.add(Double.valueOf(c1.getText()));
+            doubles.add(Double.valueOf(c2.getText()));
+            doubles.add(Double.valueOf(c3.getText()));
+            ClientSocket.getInstance().getObjectOutputStream().writeObject(Action.FORMULA_1);
+            ClientSocket.getInstance().getObjectOutputStream().flush();
+            ClientSocket.getInstance().getObjectOutputStream().writeObject(doubles);
+            ClientSocket.getInstance().getObjectOutputStream().flush();
+            Action a = (Action) ClientSocket.getInstance().getObjectInputStream().readObject();
+            switch (a) {
+                case OK: {
+                    Double res = (Double) ClientSocket.getInstance().getObjectInputStream().readObject();
+                    price.setText(String.valueOf(res));
+                    break;
+                }
+                case NO: {
+                    break;
+                }
+            }
+        }
+    }
 }
